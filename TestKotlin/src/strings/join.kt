@@ -2,7 +2,7 @@
 
 package strings
 
-import java.lang.StringBuilder
+import kotlin.text.StringBuilder
 
 fun <T> Collection<T>.joinToString(
     separator: String = ", ",
@@ -18,4 +18,10 @@ fun <T> Collection<T>.joinToString(
     return result.toString()
 }
 
-fun String.lastChar(): Char = this.get(this.length - 1)
+fun String.lastChar(): Char = this[this.length - 1]
+
+var StringBuilder.lastChar: Char
+    get() = get(length-1)
+    set(value: Char) {
+        this.setCharAt(length-1, value)
+    }

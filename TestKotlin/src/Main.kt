@@ -1,7 +1,7 @@
 import geometry.shapes.Rectangle
 import java.lang.Exception
-import java.lang.StringBuilder
 import strings.*
+import kotlin.text.StringBuilder
 
 
 data class Person(
@@ -25,6 +25,12 @@ fun main() {
 
     println(set.joinToString(prefix = "(", postfix = ")"))
     println("123".lastChar())
+
+    val str = StringBuilder("Bruh!")
+    println(str)
+    str.lastChar = '?'
+    println(str)
+
     println("$set: ${set.javaClass}")
     println("$list: ${list.javaClass}")
     println("$map: ${map.javaClass}")
